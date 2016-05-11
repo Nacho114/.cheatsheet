@@ -1,0 +1,81 @@
+                                  - - - - - - - –
+                                  | Cheat Sheet |
+                                  - - - - - - - –
+
+### VIM ########################################################################
+
+1. Ctrl + Enter:  Creates \n between {} like in Eclipse, nice for methods
+2. '.       : jump to last modification line (SUPER)
+3. save Markers mx (set marker at current position with letter x)
+4. go to Marker 'x (go to marker saved under letter x)
+5. H, M, L to jump to High (top of) the screen Middle, and Low (bottom) of the screen.
+6. Use { and } to jump over blocks of text, ( and ) to jump between sentences.
+7. Use [[ and ]] to jump between function.
+8. Use TX or tX to move before the prev or next char X
+
+### PLUGINS 
+# you complete me
+1. <Ctrl + y> to accept a selection
+
+### VIM SPELL CHECKER
+http://tips.webdesign10.com/vim/how-use-vims-spellchecker
+
+# To activate / deactivate
+1. :set spell                  
+2. :set nospell               
+
+#When in spell checking mode:
+z=   to show suggestions
+zg   add word to dictionary 
+zug  undo addition of word
+]s   next misspelled element 
+[s   previous misspelled element
+
+
+################################################################################
+
+### ZSH ########################################################################
+
+NOTE can replace command (e.g. ls) with other commands such as rm
+
+1. ls **/*.c  : use ** as wild card to descend into directories.
+2. ls *.(c|h) : use *.(arg1|arg2...) to search with either .arg1 or .arg2 ending
+3. Use tab autocompletion with EVERYTHING! (e.g. kill process, etc)
+
+################################################################################
+################################################################################
+
+                                  - - - - - - - –
+                                  | Nice Fonts  |
+                                  - - - - - - - –
+
+FontBook (Place to find all fonts)
+
+English: - old sytle
+    Luminari, Bakersville, Savoye, Snell Roundhand Heavy
+Japanese:
+    Klee, YuMincho, HiraginoMincho 
+               
+
+################################################################################
+################################################################################
+
+                                  - - - - - - - –
+                                  |     Bash     |
+                                  - - - - - - - –
+1. csv_join.in is a simple line, which line by line contains the input for said program
+   > /dev/null will redirec the stdout of the output of the program to null which is 
+   like a black hole.
+                        ./a.out < csv_join.in > /dev/null
+
+2. Searching:
+
+    find . -name "*.java" | xargs grep "pattern"
+
+    find will first filter all files in current folder ( . ), with given pattern
+    "*.java", | operator is a pipe, so the filtered files will be piped to the right,
+    which are then passed as arguments to xargs, xargs is like a map in scala, for each 
+    element in the list it will apply the command (in this case grep "pattern", which
+    looks for said pattern).
+
+
